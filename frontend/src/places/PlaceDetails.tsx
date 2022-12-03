@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router"
 import CommentCard from './CommentCard'
 import NewCommentForm from "./NewCommentForm";
-import { currentUser } from "../contexts/CurrentUser"
+import { CurrentUser } from "../contexts/CurrentUser"
+import React from "react";
 
 function PlaceDetails() {
 
@@ -105,7 +106,7 @@ function PlaceDetails() {
 	let placeActions = null
 	
 
-	if (currentUser?.role === 'admin') {
+	if (CurrentUser?.role === 'admin') {
 		placeActions = (
 			<>
 		<a className="btn btn-warning" onClick={editPlace}>

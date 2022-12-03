@@ -1,3 +1,4 @@
+import React from "react";
 
 function CommentCard({ comment, onDelete }) {
     return (
